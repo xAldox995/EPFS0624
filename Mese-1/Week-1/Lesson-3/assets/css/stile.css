@@ -1,0 +1,63 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 350px;
+
+}
+ 
+.logo p {
+    border-top: 1px solid #ffd977;
+    color: blue;
+
+}
+
+
+.titolo h1 {
+    color: grey;
+    text-align: center;
+}
+
+.titolo p {
+    padding-left: 2%;
+}
+
+.video {
+    text-align: center;
+}
+
+.sottotitoloimg {
+    border-left: 1px solid #ffd977;
+
+    padding-left: 2%;
+}
+
+.sottotitoloimg h4 {
+    border-left: color #b5460f;
+
+}
+
+.ingredients {
+    padding-left: 2%;
+}
+
+.ingredients h2 {
+    border-bottom: 1px solid #00f5f5;
+}
+
+.topping {
+    padding-left: 2%;
+}
+
+.method {
+    padding-left: 2%
+}
+
+.footer {
+    padding-left: 2%
+}

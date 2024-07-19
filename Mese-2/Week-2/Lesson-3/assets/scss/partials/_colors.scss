@@ -1,0 +1,36 @@
+
+
+/*COLORE TESTO*/
+$color-text: #f4f4f4;
+*{
+    color: $color-text ;
+}
+
+/*COLORE BOTTONI
+
+$button-blue: #0e6cff;
+$button-orange: #ff8700;
+$botton-green: #4caf50;
+
+.btnBlue {
+    background-color: $button-blue;
+}
+
+.btnOrange {
+    background-color: $button-orange;
+}
+
+.btnGreen{
+    background-color: $botton-green;
+}*/
+
+
+/*COLORE SEZIONE HERO*/
+$bg-hero:#640fc5;
+
+header {
+    div{
+        background-color: $bg-hero;
+    }
+}
+

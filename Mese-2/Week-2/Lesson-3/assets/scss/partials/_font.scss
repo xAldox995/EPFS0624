@@ -1,0 +1,20 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+$font-sizing :(
+    sm: 0.8rem,
+    md: 1rem,
+    lg: 1.5rem,
+    xl: 5rem,
+);
+
+@mixin font-sizing ($propety) {
+    @each $size, $value in $font-sizing {
+        .#{$propety}-#{$size} {
+            font-size: #{$value};
+        }
+    }
+}
+
+@include font-sizing('sizeFont');

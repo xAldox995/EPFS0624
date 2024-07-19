@@ -1,0 +1,28 @@
+$my-spacing: (
+    sm: 5px,
+    normal: 10px,
+    md: 15px,
+    lg: 20px,
+    xl: 25px,
+    xxl: 30px,
+);
+
+
+
+
+@mixin space-element($propety) {
+    @each $size, $value in $my-spacing {
+        .#{$propety}-block-#{$size} {
+            #{$propety}-top: #{$value};
+            #{$propety}-bottom: #{$value};
+        }
+
+        .#{$propety}-inline-#{$size} {
+            #{$propety}-left: #{$value}; 
+            #{$propety}-right: #{$value};
+        }
+    }
+}
+
+@include space-element('margin');
+@include space-element('padding');
