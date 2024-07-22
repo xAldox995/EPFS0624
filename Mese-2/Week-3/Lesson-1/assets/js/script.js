@@ -40,6 +40,8 @@ class Pet {
   sameOwner = function (obj) {
     if (this.ownerName = obj.ownerName) {
         return true
+    }else {
+      return false
     }
   }
 }
