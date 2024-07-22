@@ -67,11 +67,11 @@ document.getElementsByTagName('form')[0].addEventListener('submit', function (e)
         // ora lo riempio con i dati dell'elemento singolo della memoria
         newLi.innerText =
           petList[i].petName +
-          ' ' +
+          ' | ' +
           petList[i].ownerName +
           ' | ' +
           petList[i].species +
-          ' ' +
+          ' | ' +
           petList[i].breed
         // Stefano Casasola | 123123
         // <li>Stefano Casasola | 123123</li>
