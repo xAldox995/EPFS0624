@@ -26,7 +26,6 @@ document.getElementById("saveBtn").addEventListener("click", function (e) {
   userList.push(element);
   localStorage.setItem("listaUser", JSON.stringify(userList));
   genArray(userList);
-  document.getElementById("saveBtn").reset();
 });
 
 document.getElementById("removeBtn").addEventListener("click", function (e) {
