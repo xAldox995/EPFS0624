@@ -5,13 +5,15 @@ class User {
 }
 
 const genArray = function (array) {
+    console.log(array);
   const list = document.getElementById("usersList");
   list.innerHTML = ' ';
-  for (let i = 0; i < array.lenght; i++) {
+  for (let i = 0; i < array.length; i++) {
     const newLi = document.createElement("li");
     newLi.innerText = array[i].userName;
     newLi.classList.add("list-group-item");
     list.appendChild(newLi);
+    
   }
 };
 
@@ -28,11 +30,6 @@ document.getElementById("saveBtn").addEventListener("click", function (e) {
   genArray(userList);
 });
 
-document.getElementById("removeBtn").addEventListener("click", function (e) {
-  e.preventDefault();
-  userList.pop();
-  genArray(userList);
-});
 
 const saveUsersList = localStorage.getItem("listaUser");
 if (saveUsersList) {
@@ -41,6 +38,11 @@ if (saveUsersList) {
   genArray(arrayOfUsers);
 }
 
+document.getElementById("removeBtn").addEventListener("click", function (e) {
+    userList.pop();
+    localStorage.setItem("listaUser", JSON.stringify(userList))
+    genArray(userList);
+});
 /* document.getElementById('removeBtn').addEventListener('submit', function (e){
     e.preventDefault();
     userList.pop();
