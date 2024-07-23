@@ -19,22 +19,31 @@ const userList = localStorage.getItem("listaUser")
   ? JSON.parse(localStorage.getItem("listaUser"))
   : [];
 
-document
-  .getElementsByTagName("form")[0]
-  .addEventListener("submit", function (e) {
+document.getElementById("saveBtn").addEventListener("click", function (e) {
+  e.preventDefault();
+  const nameUser = document.getElementById("inputUser").value;
+  const element = new User(nameUser);
+  userList.push(element);
+  localStorage.setItem("listaUser", JSON.stringify(userList));
+  genArray(userList);
+  document.getElementById("saveBtn").reset();
+});
+
+document.getElementById("removeBtn").addEventListener("click", function (e) {
+  e.preventDefault();
+  userList.pop();
+  genArray(userList);
+});
+
+const saveUsersList = localStorage.getItem("listaUser");
+if (saveUsersList) {
+  const arrayOfUsers = JSON.parse(saveUsersList);
+  console.log(arrayOfUsers);
+  genArray(arrayOfUsers);
+}
+
+/* document.getElementById('removeBtn').addEventListener('submit', function (e){
     e.preventDefault();
-    const nameUser = document.getElementById("inputUser").value;
-    const element = new User(nameUser);
-    userList.push(element);
-    localStorage.setItem("listaUser", JSON.stringify(userList));
+    userList.pop();
     genArray(userList);
-    document.getElementsByTagName("form")[0].reset();
-  });
-
-  const saveUsersList = localStorage.getItem('listaUser');
-  if (saveUsersList) {
-    const arrayOfUsers = JSON.parse(saveUsersList);
-    console.log(arrayOfUsers);
-    genArray(arrayOfUsers);
-  }
-
+  })*/
