@@ -38,7 +38,7 @@ class Pet {
     this.breed = _breed;
   }
   sameOwner = function (obj) {
-    if (this.ownerName = obj.ownerName) {
+    if (this.ownerName === obj.ownerName) {
         return true
     }else {
       return false
@@ -55,6 +55,13 @@ document.getElementsByTagName('form')[0].addEventListener('submit', function (e)
     const breedValue = document.getElementById('breed').value;
     
     const element = new Pet(petNameValue, ownerNameValue, speciesValue, breedValue);
+
+    for (let pet of petList) {
+      if (element.sameOwner(pet)) {
+        alert('Attenzione: ' + element.ownerName + ' è già il proprietario di un altro animale.');
+        break;
+      }
+    }
     
     petList.push(element);
     
