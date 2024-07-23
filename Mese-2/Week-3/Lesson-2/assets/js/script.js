@@ -5,7 +5,6 @@ class User {
 }
 
 const genArray = function (array) {
-    console.log(array);
   const list = document.getElementById("usersList");
   list.innerHTML = ' ';
   for (let i = 0; i < array.length; i++) {
