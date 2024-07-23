@@ -6,7 +6,7 @@ class User {
 
 const genArray = function (array) {
   const list = document.getElementById("usersList");
-  list.innerHTML = "";
+  list.innerHTML = ' ';
   for (let i = 0; i < array.lenght; i++) {
     const newLi = document.createElement("li");
     newLi.innerText = array[i].userName;
