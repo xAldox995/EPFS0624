@@ -5,6 +5,7 @@ class User {
 }
 
 const genArray = function (array) {
+console.log(array);
   const list = document.getElementById("usersList");
   list.innerHTML = ' ';
   for (let i = 0; i < array.length; i++) {
@@ -33,7 +34,6 @@ document.getElementById("saveBtn").addEventListener("click", function (e) {
 const saveUsersList = localStorage.getItem("listaUser");
 if (saveUsersList) {
   const arrayOfUsers = JSON.parse(saveUsersList);
-  console.log(arrayOfUsers);
   genArray(arrayOfUsers);
 }
 
