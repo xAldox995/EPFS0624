@@ -26,9 +26,7 @@ const user6 = new User("Virgilio", "Impero", 30, "Roma");
 
 console.log(user1.comparation(user6));
 
-
-
-console.log('Esercizio PET'); 
+console.log("Esercizio PET");
 
 class Pet {
   constructor(_petName, _ownerName, _species, _breed) {
@@ -39,61 +37,75 @@ class Pet {
   }
   sameOwner = function (obj) {
     if (this.ownerName === obj.ownerName) {
-        return true
-    }else {
-      return false
+      return true;
+    } else {
+      return false;
     }
-  }
+  };
 }
 
 const petList = [];
 
-document.getElementsByTagName('form')[0].addEventListener('submit', function (e) {e.preventDefault();
-    const petNameValue = document.getElementById('petName').value;
-    const ownerNameValue = document.getElementById('ownerName').value;
-    const speciesValue = document.getElementById('species').value;
-    const breedValue = document.getElementById('breed').value;
-    
-    const element = new Pet(petNameValue, ownerNameValue, speciesValue, breedValue);
+document
+  .getElementsByTagName("form")[0]
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+    const petNameValue = document.getElementById("petName").value;
+    const ownerNameValue = document.getElementById("ownerName").value;
+    const speciesValue = document.getElementById("species").value;
+    const breedValue = document.getElementById("breed").value;
+
+    const element = new Pet(
+      petNameValue,
+      ownerNameValue,
+      speciesValue,
+      breedValue
+    );
 
     for (let pet of petList) {
       if (element.sameOwner(pet)) {
-        alert('Attenzione: ' + element.ownerName + ' è già il proprietario di un altro animale.');
+        alert(
+          "Attenzione: " +
+            element.ownerName +
+            " è già il proprietario di un altro animale."
+        );
         break;
       }
     }
-    
+
     petList.push(element);
-    
-    const unorderedList = document.getElementById('petList');
-    
-    unorderedList.innerHTML = '';
-    
+
+    const unorderedList = document.getElementById("petList");
+
+    unorderedList.innerHTML = "";
+
     for (let i = 0; i < petList.length; i++) {
-        // quest'operazione verrà ripetuta per OGNI elemento della memoria
-        // creo un <li> vuoto
-        const newLi = document.createElement('li') // <li>  </li>
-        // ora lo riempio con i dati dell'elemento singolo della memoria
-        newLi.innerText =
-          petList[i].petName +
-          ' | ' +
-          petList[i].ownerName +
-          ' | ' +
-          petList[i].species +
-          ' | ' +
-          petList[i].breed
-        // Stefano Casasola | 123123
-        // <li>Stefano Casasola | 123123</li>
-        newLi.classList.add('list-group-item')
-        // <li class="list-group-item">Stefano Casasola | 123123</li>
-        // ora, passo finale, appendo l'<li> appena creato e finito
-        // nella lista non ordinata
-        unorderedList.appendChild(newLi)
-      }
-    
-      // resetto il form
-      // firstNameInput.value = ''
-      // lastNameInput.value = ''
-      // phoneInput.value = ''
-      document.getElementsByTagName('form')[0].reset()
-}); 
+      // quest'operazione verrà ripetuta per OGNI elemento della memoria
+      // creo un <li> vuoto
+      const newLi = document.createElement("li"); // <li>  </li>
+      // ora lo riempio con i dati dell'elemento singolo della memoria
+
+      newLi.innerText =
+        "Pet Name: " +
+        petList[i].petName +
+        " | Owner Name:  " +
+        petList[i].ownerName +
+        " | Species: " +
+        petList[i].species +
+        " | Breed: " +
+        petList[i].breed;
+      // Stefano Casasola | 123123
+      // <li>Stefano Casasola | 123123</li>
+      newLi.classList.add("list-group-item");
+      // <li class="list-group-item">Stefano Casasola | 123123</li>
+      // ora, passo finale, appendo l'<li> appena creato e finito
+      // nella lista non ordinata
+      unorderedList.appendChild(newLi);
+    }
+
+    // resetto il form
+    // firstNameInput.value = ''
+    // lastNameInput.value = ''
+    // phoneInput.value = ''
+    document.getElementsByTagName("form")[0].reset();
+  });
