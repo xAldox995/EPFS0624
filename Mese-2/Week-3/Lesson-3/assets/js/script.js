@@ -9,11 +9,15 @@ const booksObjs = function () {
         throw new Error("La risposta del server non era corretta");
       }
     })
-    .then((data) => {
+    /*.then((data) => {
       console.log("FINITO!", data);
       generateCards(usersList).then((booksList) => {
         console.log("LIBRI", booksList);
       });
+    })*/
+    .then((data) => {
+      console.log("RECUPERO GLI OGGETTI", data);
+      generateCards(data);
     })
     .catch((error) => {
       console.log("error", error);
@@ -40,12 +44,17 @@ const generateCards = function (booksArray) {
     newCard.appendChild(bodyCard);
     const titleCard = document.createElement("h5");
     titleCard.classList.add("card-list");
+    titleCard.innerText = book.title;
     bodyCard.appendChild(titleCard);
     const pCard = document.createElement("p");
     pCard.classList.add("card-text");
+    pCard.innerText = book.price;
     bodyCard.appendChild(pCard);
-    const removeCard = document.createElement('i');
-    removeCard.classList.add('bi bi-trash3');
-    bodyCard.appendChild(removeCard);
+    const removeBtn = document.createElement("button");
+    removeBtn.classList.add("btn btn-outline-danger");
+    bodyCard.appendChild(removeBtn);
+    const removeImg = document.createElement('i')
+    removeCard.classList.add("bi bi-trash3");
+    removeBtn.appendChild(removeImg);
   });
 };
