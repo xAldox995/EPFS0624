@@ -46,6 +46,6 @@ const generateCards = function (booksArray) {
     bodyCard.appendChild(pCard);
     const removeCard = document.createElement('i');
     removeCard.classList.add('bi bi-trash3');
-    bodyCard.appendChild(removeCard)
+    bodyCard.appendChild(removeCard);
   });
 };
