@@ -24,37 +24,39 @@ const booksObjs = function () {
     });
 };
 
+const generateCards = function (booksArray) {
+    const cardGroup = document.getElementById("row");
+    booksArray.forEach((book) => {
+      const newCol = document.createElement("div");
+      newCol.classList.add("col-6, col-md-3, col-lg-2");
+      cardGroup.appendChild(newCol);
+      const newCard = document.createElement("div");
+      newCard.classList.add("card");
+      newCol.appendChild(newCard);
+      const imgCard = document.createElement("img");
+      imgCard.classList.add("card-img-top");
+      imgCard.src = book.img;
+      newCard.appendChild(imgCard);
+      const bodyCard = document.createElement("div");
+      bodyCard.classList.add("card-body");
+      newCard.appendChild(bodyCard);
+      const titleCard = document.createElement("h5");
+      titleCard.classList.add("card-list");
+      titleCard.innerText = book.title;
+      bodyCard.appendChild(titleCard);
+      const pCard = document.createElement("p");
+      pCard.classList.add("card-text");
+      pCard.innerText = book.price;
+      bodyCard.appendChild(pCard);
+      const removeBtn = document.createElement("a");
+      removeBtn.classList.add("btn btn-outline-danger");
+      bodyCard.appendChild(removeBtn);
+      const removeImg = document.createElement('i')
+      removeCard.classList.add("bi bi-trash3");
+      removeBtn.appendChild(removeImg);
+    });
+  };
+  
+
 booksObjs();
 
-const generateCards = function (booksArray) {
-  const cardGroup = document.getElementById("row");
-  booksArray.array.forEach((book) => {
-    const newCol = document.createElement("div");
-    newCol.classList.add("col-6, col-md-3, col-lg-2");
-    cardGroup.appendChild(newCol);
-    const newCard = document.createElement("div");
-    newCard.classList.add("card");
-    newCol.appendChild(newCard);
-    const imgCard = document.createElement("img");
-    imgCard.classList.add("card-img-top");
-    imgCard.src = book.img;
-    newCard.appendChild(imgCard);
-    const bodyCard = document.createElement("div");
-    bodyCard.classList.add("card-body");
-    newCard.appendChild(bodyCard);
-    const titleCard = document.createElement("h5");
-    titleCard.classList.add("card-list");
-    titleCard.innerText = book.title;
-    bodyCard.appendChild(titleCard);
-    const pCard = document.createElement("p");
-    pCard.classList.add("card-text");
-    pCard.innerText = book.price;
-    bodyCard.appendChild(pCard);
-    const removeBtn = document.createElement("a");
-    removeBtn.classList.add("btn btn-outline-danger");
-    bodyCard.appendChild(removeBtn);
-    const removeImg = document.createElement('i')
-    removeCard.classList.add("bi bi-trash3");
-    removeBtn.appendChild(removeImg);
-  });
-};
