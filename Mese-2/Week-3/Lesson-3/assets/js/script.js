@@ -50,7 +50,7 @@ const generateCards = function (booksArray) {
     pCard.classList.add("card-text");
     pCard.innerText = book.price;
     bodyCard.appendChild(pCard);
-    const removeBtn = document.createElement("button");
+    const removeBtn = document.createElement("a");
     removeBtn.classList.add("btn btn-outline-danger");
     bodyCard.appendChild(removeBtn);
     const removeImg = document.createElement('i')
