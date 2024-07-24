@@ -28,7 +28,7 @@ const generateCards = function (booksArray) {
     const cardGroup = document.getElementById("row");
     booksArray.forEach((book) => {
       const newCol = document.createElement("div");
-      newCol.classList.add("col-6","col-md-4","col-lg3");
+      newCol.classList.add("col-6","col-md-3");
       const newCard = document.createElement("div");
       newCard.classList.add("card");
       newCol.appendChild(newCard);
