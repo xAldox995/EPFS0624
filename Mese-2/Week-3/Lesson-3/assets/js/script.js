@@ -28,7 +28,7 @@ const generateCards = function (booksArray) {
     const cardGroup = document.getElementById("row");
     booksArray.forEach((book) => {
       const newCol = document.createElement("div");
-      newCol.classList.add("col-6","col-md-3","col-lg-2");
+      newCol.classList.add("col-6","col-md-3","col-lg3");
       const newCard = document.createElement("div");
       newCard.classList.add("card");
       newCol.appendChild(newCard);
@@ -37,7 +37,7 @@ const generateCards = function (booksArray) {
       imgCard.src = book.img;
       newCard.appendChild(imgCard);
       const bodyCard = document.createElement("div");
-      bodyCard.classList.add("card-body");
+      bodyCard.classList.add("card-body","bg-dark","text-light");
       newCard.appendChild(bodyCard);
       const titleCard = document.createElement("h5");
       titleCard.classList.add("card-list");
@@ -45,7 +45,7 @@ const generateCards = function (booksArray) {
       bodyCard.appendChild(titleCard);
       const pCard = document.createElement("p");
       pCard.classList.add("card-text");
-      pCard.innerText = book.price;
+      pCard.innerText =`${book.price} $` ;
       bodyCard.appendChild(pCard);
       const removeBtn = document.createElement("a");
       removeBtn.classList.add("btn","btn-outline-danger");
