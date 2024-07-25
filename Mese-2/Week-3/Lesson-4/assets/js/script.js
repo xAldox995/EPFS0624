@@ -26,3 +26,14 @@ const getImages = function (query) {
 };
 
 // getImages('crypto');
+const replaceOfEdits = function () {
+  const allTheEdits = document.querySelectorAll('.card .btn-group button:last-of-type');
+  allTheEdits,array.forEach(element => {
+    element.innerText = 'Hide'
+    element.addEventListener('click', function (e) {
+      this.closest('.card').classList.add('invisible')
+    })
+  });
+}
+
+replaceOfEdits()
