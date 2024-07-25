@@ -25,10 +25,10 @@ const getImages = function (query) {
     });
 };
 
-document.querySelector('.btn-outline-success').addEventListener('click', () => {
-  const currentSearchValue = document.getElementById('search').value
-  getImages(currentSearchValue)
-})
+document.querySelector(".btn-outline-success").addEventListener("click", () => {
+  const currentSearchValue = document.getElementById("search").value;
+  getImages(currentSearchValue);
+});
 // getImages('crypto');
 // const replaceOfEdits = function () {
 //   const allTheEdits = document.querySelectorAll('.card .btn-group button:last-of-type');
@@ -39,7 +39,19 @@ document.querySelector('.btn-outline-success').addEventListener('click', () => {
 //     })
 //   });
 // }
-
-
-
 // replaceOfEdits()
+const replaceAllEdits = function () {
+  const allTheEdits = document.querySelectorAll(
+    ".card .btn-group button:last-of-type"
+  );
+  console.log(allTheEdits);
+  allTheEdits.forEach((edit) => {
+    edit.innerText = "Hide";
+    edit.addEventListener("click", function (e) {
+      console.log("hide");
+      e.target.closest(".card").classList.add("invisible");
+    });
+  });
+};
+
+replaceAllEdits();
