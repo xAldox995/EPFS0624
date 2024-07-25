@@ -1,8 +1,8 @@
-const getImage = function (query) {
+const getImages = function (query) {
   fetch("https://api.pexels.com/v1/search?query=" + query, {
     headers: {
-      Authorizzation:
-        "hYEaBjSs4pF6PvZAQDn20vd8RRox2g1UV9vVi12uNloPydZQMVh4SE8r"
+      Authorization:
+        "hYEaBjSs4pF6PvZAQDn20vd8RRox2g1UV9vVi12uNloPydZQMVh4SE8r",
     },
   })
     .then((response) => {
@@ -22,4 +22,4 @@ const getImage = function (query) {
     });
 };
 
-getImage();
+getImages("crypto");
