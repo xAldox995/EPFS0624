@@ -14,7 +14,7 @@ const getImages = function (query) {
     })
     .then((data) => {
       console.log("Ecco i dati", data.photos);
-      let allTheDogImgs = document.querySelectorAll(".card img");
+      const allTheDogImgs = document.querySelectorAll(".card img");
       allTheDogImgs.forEach((dog, i) => {
         dog.src = data.photos[i].src.medium;
       });
@@ -25,15 +25,21 @@ const getImages = function (query) {
     });
 };
 
+document.querySelector('.btn-outline-success').addEventListener('click', () => {
+  const currentSearchValue = document.getElementById('search').value
+  getImages(currentSearchValue)
+})
 // getImages('crypto');
-const replaceOfEdits = function () {
-  const allTheEdits = document.querySelectorAll('.card .btn-group button:last-of-type');
-  allTheEdits,array.forEach(element => {
-    element.innerText = 'Hide'
-    element.addEventListener('click', function (e) {
-      this.closest('.card').classList.add('invisible')
-    })
-  });
-}
+// const replaceOfEdits = function () {
+//   const allTheEdits = document.querySelectorAll('.card .btn-group button:last-of-type');
+//   allTheEdits,array.forEach(element => {
+//     element.innerText = 'Hide'
+//     element.addEventListener('click', function (e) {
+//       this.closest('.card').classList.add('invisible')
+//     })
+//   });
+// }
 
-replaceOfEdits()
+
+
+// replaceOfEdits()
