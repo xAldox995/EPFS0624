@@ -11,7 +11,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <ImageComponent src='https://www.keyweo.com/wp-content/uploads/2023/02/logo-G.png' />
+        <ImageComponent src='https://img.icons8.com/?size=100&id=17949&format=png&color=000000' />
         <ButtonComponent action='https://www.google.it/' name='GOOGLE' />
         <ImageComponent src='https://img.icons8.com/?size=100&id=dJjTWMogzFzg&format=png&color=000000' />
         <ButtonComponent action='https://vitejs.dev/' name='VITE' />
