@@ -13,9 +13,9 @@ function App() {
         </p>
         <ImageComponent src='https://www.keyweo.com/wp-content/uploads/2023/02/logo-G.png' />
         <ButtonComponent action='https://www.google.it/' name='GOOGLE' />
-        <ImageComponent src='https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg' />
+        <ImageComponent src='https://img.icons8.com/?size=100&id=dJjTWMogzFzg&format=png&color=000000' />
         <ButtonComponent action='https://vitejs.dev/' name='VITE' />
-        <ImageComponent src='https://www.keyweo.com/wp-content/uploads/2023/02/logo-G.png' />
+        <ImageComponent src='https://img.icons8.com/?size=100&id=123603&format=png&color=000000' />
         <ButtonComponent action='https://it.legacy.reactjs.org/' name='REACT IT' />
         <a
           className="App-link"
