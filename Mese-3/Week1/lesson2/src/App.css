@@ -44,6 +44,10 @@ html, body {
   margin: 0;
 }
 
+body::-webkit-scrollbar {
+  display: none; /* Per Chrome, Safari e Opera */
+}
+
 /* #root {
   display: flex;
   flex-direction: column;
