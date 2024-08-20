@@ -1,21 +1,26 @@
 import { Button, Card, Row, Col } from "react-bootstrap";
+import fantasy from "../data/fantasy.json";
 
 const AllTheBooks = function () {
   return (
     <Row xs={1} md={3} lg={6} className="g-4 mx-2">
-      <Col>
-        <Card>
-          <Card.Img variant="top" src="https://placedog.net/500" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-      </Col>
+      {fantasy.map((book) => (
+        <Col key={book.asin} className="d-flex">
+          <Card className="h-100 d-flex flex-column">
+            <Card.Img 
+              variant="top" 
+              src={book.img} 
+              className="img-fluid" 
+              style={{ height: '200px', objectFit: 'cover' }} 
+            />
+            <Card.Body className="d-flex flex-column">
+              <Card.Title>{book.title}</Card.Title>
+              <Card.Text className="flex-grow-1">{book.category}</Card.Text>
+              <Button variant="primary" className="mt-auto">More Info</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
     </Row>
   );
 };
