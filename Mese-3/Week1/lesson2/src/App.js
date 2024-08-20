@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import NavComponent from "./components/NavComponent";
+import MyFooter from "./components/MyFooter";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
 
       </main>
       <footer>
-
+        <MyFooter />
       </footer>
     </>
   );
