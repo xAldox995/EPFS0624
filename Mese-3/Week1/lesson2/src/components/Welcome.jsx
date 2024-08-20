@@ -16,7 +16,7 @@ const Welcome = function () {
       </Alert>
     );
   }
-  return <Button className ='m-5' variant="success" onClick={() => setShow(true)}>Show Alert</Button>;
+  return <Button className ='m-5' variant="outline-success" onClick={() => setShow(true)}>Show Offer</Button>;
 };
 
 export default Welcome;
