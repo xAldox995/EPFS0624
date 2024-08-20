@@ -2,7 +2,7 @@ import { Navbar, Container, Nav } from "react-bootstrap"
 
 const NavComponent = function () {
     return (
-        <Navbar collapseOnSelect expand="md" className="bg-body-tertiary">
+        <Navbar collapseOnSelect expand="md"  bg="dark" data-bs-theme="dark">
         <Container fluid>
           <Navbar.Brand href="#home"><img src="https://img.icons8.com/?size=100&id=wNZ3FTgUzSQX&format=png&color=000000" alt="booksLogo" /></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
