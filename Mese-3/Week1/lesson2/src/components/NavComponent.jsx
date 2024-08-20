@@ -8,7 +8,7 @@ const NavComponent = function () {
           <img
             src="https://img.icons8.com/?size=100&id=wNZ3FTgUzSQX&format=png&color=000000"
             alt="booksLogo"
-          />BestBook.com
+          />BestBooks.com
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
