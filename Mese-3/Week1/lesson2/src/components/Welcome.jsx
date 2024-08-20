@@ -7,7 +7,7 @@ const Welcome = function () {
 
   if (show) {
     return (
-      <Alert variant="success" onClose={() => setShow(false)} dismissible>
+      <Alert  className ='m-5' variant="success" onClose={() => setShow(false)} dismissible>
         <Alert.Heading>Special Offer!</Alert.Heading>
         <p>
           Free shipping on orders over $50. Explore our latest collection of
@@ -16,7 +16,7 @@ const Welcome = function () {
       </Alert>
     );
   }
-  return <Button onClick={() => setShow(true)}>Show Alert</Button>;
+  return <Button className ='m-5' variant="success" onClick={() => setShow(true)}>Show Alert</Button>;
 };
 
 export default Welcome;
