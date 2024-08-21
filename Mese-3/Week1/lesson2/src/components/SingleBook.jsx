@@ -17,26 +17,26 @@ class SingleBook extends Component {
   };
 
   render() {
-    const { book } = this.props;
-    const { chosen } = this.state.selected;
+    // const { book } = this.props;
+    // const { chosen } = this.state.selected;
 
-    const cardStyle = chosen ? { border: "3px solid red" } : {};
+    // const cardStyle= chosen ? { border: "3px solid red" } : {};
 
 
     return (
-      <Card className="w-100 d-flex flex-column" style={cardStyle}>
+      <Card className="w-100 d-flex flex-column" style={this.state.selected.chosen ? { border: "3px solid red" } : {}}>
         <div className="flex-grow-1 d-flex">
           <Card.Img
             variant="top"
-            src={book.img}
+            src={this.props.book.img}
             className="img-fluid"
             style={{ height: "200px", objectFit: "cover", width: "100%" }}
             onClick={this.toggleSelected}
           />
         </div>
         <Card.Body className="d-flex flex-column">
-          <Card.Title>{book.title}</Card.Title>
-          <Card.Text className="flex-grow-1">{book.category}</Card.Text>
+          <Card.Title>{this.props.book.title}</Card.Title>
+          <Card.Text className="flex-grow-1">{this.props.book.category}</Card.Text>
           <Button variant="primary" className="my-auto">
             More Info
           </Button>
@@ -45,7 +45,7 @@ class SingleBook extends Component {
               type="checkbox"
               label="SELECTED"
               onChange={this.toggleSelected}
-              checked={chosen}
+              checked={this.state.selected.chosen}
             />
           </Form.Group>
         </Card.Body>

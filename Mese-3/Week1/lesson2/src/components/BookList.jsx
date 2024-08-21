@@ -11,9 +11,8 @@ class BookList extends Component {
   };
 
   getFilteredBooks() {
-    const {name}  = this.state.searchBook;
     return fantasy.filter((book) =>
-      book.title.toLocaleLowerCase().includes(name.toLocaleLowerCase())
+      book.title.toLocaleLowerCase().includes(this.state.searchBook.name.toLowerCase())
     );
   }
   render() {
