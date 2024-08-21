@@ -3,7 +3,7 @@ import "./App.css";
 import NavComponent from "./components/NavComponent";
 import MyFooter from "./components/MyFooter";
 import Welcome from "./components/Welcome";
-import AllTheBooks from "./components/AllTheBooks";
+import BookList from "./components/BookList";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       </header>
       <main>
         <Welcome />
-        <AllTheBooks />
+        <BookList />
       </main>
       <footer>
         <MyFooter />
