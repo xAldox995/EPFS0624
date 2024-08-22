@@ -63,9 +63,7 @@ class AddComponent extends Component {
           <option>Very satisfied</option>
         </Form.Select>
         <Form.Group className="my-2">
-          <Form.Label>Comments</Form.Label>
-          <Form.Control
-            as="textarea"
+          <Form.Control placeholder="Your Comment"
             onChange={(e) => {
               this.setState({
                 review: {
