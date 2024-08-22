@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button, Card} from "react-bootstrap";
+import CommentArea from "./CommetArea";
 class SingleBook extends Component {
   state = {
     selected: {
@@ -40,6 +41,9 @@ class SingleBook extends Component {
           <Button variant="primary" className="my-auto">
             More Info
           </Button>
+          <>
+            <CommentArea />
+          </>
         </Card.Body>
       </Card>
     );
