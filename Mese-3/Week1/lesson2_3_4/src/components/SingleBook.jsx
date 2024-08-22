@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Card} from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import CommentArea from "./CommetArea";
 class SingleBook extends Component {
   state = {
@@ -23,9 +23,12 @@ class SingleBook extends Component {
 
     // const cardStyle= chosen ? { border: "3px solid red" } : {};
 
-
     return (
-      <Card className="w-100 d-flex flex-column" style={this.state.selected.chosen ? { border: "3px solid red" } : {}}>
+      <div>
+      <Card
+        className="w-100 d-flex flex-column h-100"  // Ensure full height
+        style={this.state.selected.chosen ? { border: "3px solid red" } : {}}
+      >
         <div className="flex-grow-1 d-flex">
           <Card.Img
             variant="top"
@@ -35,17 +38,19 @@ class SingleBook extends Component {
             onClick={this.toggleSelected}
           />
         </div>
-        <Card.Body className="d-flex flex-column">
+        <Card.Body className="d-flex flex-column flex-grow-1">
           <Card.Title>{this.props.book.title}</Card.Title>
-          <Card.Text className="flex-grow-1">€ {this.props.book.price}</Card.Text>
-          <Button variant="primary" className="my-auto">
+          <Card.Text className="flex-grow-1">
+            € {this.props.book.price}
+          </Card.Text>
+          <Button variant="primary" className="mt-auto">
             More Info
           </Button>
-          <>
-            <CommentArea />
-          </>
+          <CommentArea />
         </Card.Body>
       </Card>
+      {this.state.selected.chosen && <CommentArea asin={this.props.book.asin}/>}
+    </div>
     );
   }
 }

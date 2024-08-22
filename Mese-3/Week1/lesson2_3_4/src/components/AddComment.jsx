@@ -6,21 +6,20 @@ class AddComponent extends Component {
     review: {
       rate: "",
       comment: "",
+      elementId: this.props.asin,
     },
   };
 
   subReview = (e) => {
     e.preventDefault();
-    fetch(
-      "https://striveschool-api.herokuapp.com/api/put-your-endpoint-here/",
-      {
-        method: "POST",
-        headers: {
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmM3MzAzNjQzYTU2ODAwMTU4ZWMzZDciLCJpYXQiOjE3MjQzMzY4MTAsImV4cCI6MTcyNTU0NjQxMH0.IAYgX8hoqO8OfkDgo6Ow2vo_a21WFMv6YeiRdBNises",
-        },
-      }
-    )
+    fetch("https://striveschool-api.herokuapp.com/api/comments/", {
+      method: "POST",
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmM3MzAzNjQzYTU2ODAwMTU4ZWMzZDciLCJpYXQiOjE3MjQzMzY4MTAsImV4cCI6MTcyNTU0NjQxMH0.IAYgX8hoqO8OfkDgo6Ow2vo_a21WFMv6YeiRdBNises",
+      },
+      body: JSON.stringify(this.state.review)
+    })
       .then((response) => {
         if (response.ok) {
           console.log("recensione inviata");
@@ -63,7 +62,8 @@ class AddComponent extends Component {
           <option>Very satisfied</option>
         </Form.Select>
         <Form.Group className="my-2">
-          <Form.Control placeholder="Your Comment"
+          <Form.Control
+            placeholder="Your Comment"
             onChange={(e) => {
               this.setState({
                 review: {
@@ -75,7 +75,9 @@ class AddComponent extends Component {
             value={this.state.review.comment}
           />
         </Form.Group>
-        <Button variant="outline-dark" type="submit">Send</Button>
+        <Button variant="outline-dark" type="submit">
+          Send
+        </Button>
       </Form>
     );
   }
