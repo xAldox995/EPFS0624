@@ -36,7 +36,7 @@ class SingleBook extends Component {
         </div>
         <Card.Body className="d-flex flex-column">
           <Card.Title>{this.props.book.title}</Card.Title>
-          <Card.Text className="flex-grow-1">{this.props.book.category}</Card.Text>
+          <Card.Text className="flex-grow-1">€ {this.props.book.price}</Card.Text>
           <Button variant="primary" className="my-auto">
             More Info
           </Button>
