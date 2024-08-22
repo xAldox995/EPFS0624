@@ -42,6 +42,7 @@ class AddComponent extends Component {
   render() {
     return (
       <Form className="my-3" onSubmit={this.subReview}>
+        <p>Your Review</p>
         <Form.Select
           aria-label="Default select example"
           onChange={(e) => {
@@ -76,7 +77,7 @@ class AddComponent extends Component {
             value={this.state.review.comment}
           />
         </Form.Group>
-        <Button variant="outline-dark">Your Review</Button>
+        <Button variant="outline-dark" type="submit">Send</Button>
       </Form>
     );
   }
