@@ -1,11 +1,10 @@
 import { Component } from "react";
-import { Form } from "react-bootstrap";
 import AddComponent from "./AddComment";
 
 class CommentArea extends Component {
   render() {
     return (
-      <Form>
+      <>
         {/* <Form.Select aria-label="Default select example" className="my-3">
           <option>Rate the book</option>
           <option>Very dissatisfied</option>
@@ -19,7 +18,7 @@ class CommentArea extends Component {
           <Form.Control as="textarea"></Form.Control>
         </Form.Group> */}
         < AddComponent />
-      </Form>
+      </>
     );
   }
 }
