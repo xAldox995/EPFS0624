@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Card, Form } from "react-bootstrap";
+import { Button, Card} from "react-bootstrap";
 class SingleBook extends Component {
   state = {
     selected: {
@@ -40,14 +40,6 @@ class SingleBook extends Component {
           <Button variant="primary" className="my-auto">
             More Info
           </Button>
-          <Form.Group className="m-2" id="formGridCheckbox">
-            <Form.Check
-              type="checkbox"
-              label="SELECTED"
-              onChange={this.toggleSelected}
-              checked={this.state.selected.chosen}
-            />
-          </Form.Group>
         </Card.Body>
       </Card>
     );
