@@ -14,7 +14,7 @@ class SingleBook extends Component {
           onClick={() => this.setState({ selected: !this.state.selected })}
           style={{ border: this.state.selected ? '3px solid red' : 'none' }}
         >
-          <Card.Img variant="top" src={this.props.book.img} />
+          <Card.Img variant="top" src={this.props.book.img}  style={{ height: "650px", objectFit: "cover", width: "100%" }} />
           <Card.Body>
             <Card.Title style={{ color: 'black' }}>
               {this.props.book.title}

@@ -8,7 +8,12 @@ const MyNav = () => (
     data-bs-theme="dark"
   >
     <Container fluid>
-      <Navbar.Brand href="#">EpiBooks</Navbar.Brand>
+    <Navbar.Brand href="#home">
+          <img
+            src="https://img.icons8.com/?size=100&id=wNZ3FTgUzSQX&format=png&color=000000"
+            alt="booksLogo"
+          />BestBooks.com
+        </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
