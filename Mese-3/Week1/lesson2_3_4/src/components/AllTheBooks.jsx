@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Card, Row, Col } from "react-bootstrap";
+import {Row, Col } from "react-bootstrap";
 import fantasy from "../data/fantasy.json";
 import SingleBook from "./SingleBook";
 

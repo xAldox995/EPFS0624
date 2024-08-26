@@ -14,7 +14,7 @@ class AddComment extends Component {
     e.preventDefault()
     try {
       let response = await fetch(
-        'https://striveschool-api.herokuapp.com/api/comments',
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmM3MzAzNjQzYTU2ODAwMTU4ZWMzZDciLCJpYXQiOjE3MjQzMzY4MTAsImV4cCI6MTcyNTU0NjQxMH0.IAYgX8hoqO8OfkDgo6Ow2vo_a21WFMv6YeiRdBNises",
         {
           method: 'POST',
           body: JSON.stringify(this.state.comment),
