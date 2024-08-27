@@ -38,7 +38,7 @@ const AddComment = ({ asin, changeUpdateCommentsList }) => {
           "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmM3NTU5MDQzYTU2ODAwMTU4ZWM0N2QiLCJpYXQiOjE3MjQzMzk2MDAsImV4cCI6MTcyNTU0OTIwMH0.3s4fBf_wAd6_WnhGb2s25J5AGcbrlGuBdE9CbFjQhPQ",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(this.state.review),
+      body: JSON.stringify(review),
     })
       .then((response) => {
         if (response.ok) {
@@ -48,13 +48,11 @@ const AddComment = ({ asin, changeUpdateCommentsList }) => {
           //
           changeUpdateCommentsList();
           //
-          this.setState({
-            review: {
-              // elementId: this.state.elementId,
-              ...review,
-              rate: "1",
-              comment: "",
-            },
+          setReview({
+            // elementId: this.state.elementId,
+            ...review,
+            rate: "1",
+            comment: "",
           });
         } else {
           alert("Commento NON salvato!");
@@ -71,10 +69,10 @@ const AddComment = ({ asin, changeUpdateCommentsList }) => {
       <Form onSubmit={handleSubmit}>
         <Form.Select
           value={review.rate}
-          onChange={(e) => 
+          onChange={(e) =>
             setReview({
               ...review,
-              rate : e.target.value
+              rate: e.target.value,
             })
           }
         >
@@ -88,10 +86,10 @@ const AddComment = ({ asin, changeUpdateCommentsList }) => {
           <Form.Control
             placeholder="Scrivi la tua review"
             value={review.comment}
-            onChange={(e) => 
-              setReview ({
+            onChange={(e) =>
+              setReview({
                 ...review,
-                comment : e.target.value
+                comment: e.target.value,
               })
             }
           />

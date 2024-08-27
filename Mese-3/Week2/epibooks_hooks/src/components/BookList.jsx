@@ -8,9 +8,7 @@ const BookList = ({ booksArray }) => {
   const [selectedBookAsin, setSelectedBookAsin] = useState("");
 
   const changeSelectedBookAsin = (newAsin) => {
-    setSelectedBookAsin({
-      selectedBookAsin: newAsin,
-    });
+    setSelectedBookAsin(newAsin);
   };
 
   return (
