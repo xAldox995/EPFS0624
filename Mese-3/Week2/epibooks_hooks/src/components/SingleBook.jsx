@@ -16,6 +16,7 @@ changeSelectedBookAsin(libro.asin)
               ? '4px solid red'
               : '1px solid gray',
         }}
+        data-testId = 'single-book'
       >
         <Card.Img
           style={{ height: '300px', objectFit: 'cover', width: '100%' }}
