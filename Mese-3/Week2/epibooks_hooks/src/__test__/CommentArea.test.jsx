@@ -6,7 +6,7 @@ import scifi from "../data/scifi.json"
 
 describe("comment list behavior", () => {
   it("doesn't render any comment item initially", () => {
-    render(<CommentArea />);
+    render(<CommentArea asin={scifi[0].asin}/>);
     const allCommentItems = screen.queryAllByTestId("comment-element");
     expect(allCommentItems).toHaveLength(0);
   });
