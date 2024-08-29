@@ -1,6 +1,5 @@
-
-
 //  V - TO DO: VERIFICARE CHE IL COMPONENTE RENDERIZZA TANTE BOOTSTRAP CARDS
+//  - TO DO
 
 import { render, screen } from "@testing-library/react";
 import BookList from "../components/BookList";
@@ -15,4 +14,3 @@ describe("render the correct number of SingleBook components", () => {
   });
   
 
-  
