@@ -18,7 +18,7 @@ const mainReducer = (state = initialState, action) => {
             ... state,
             favorites : {
                 ...state.favorites,
-                jobOffers: state.favorites.jobOffers.filter((book,i) => i !== action.payload),
+                jobOffers: state.favorites.jobOffers.filter((job) => job._id !== action.payload),
             }
         }
 

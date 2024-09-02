@@ -47,7 +47,7 @@ const MainSearch = () => {
           ))}
         </Col>
         <Col>
-          <Button variant="outline-dark">Go on your Favorites</Button>
+          <Button variant="outline-dark" onClick={()=>navigate('/favorites')}>Go on your Favorites</Button>
         </Col>
       </Row>
     </Container>

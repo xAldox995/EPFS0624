@@ -38,9 +38,6 @@ const CompanySearchResults = () => {
             <Job key={jobData._id} data={jobData} />
           ))}
         </Col>
-        <Col>
-          <Button variant="outline-dark">Go on your Favorites</Button>
-        </Col>
       </Row>
     </Container>
   );
