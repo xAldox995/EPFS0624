@@ -14,6 +14,14 @@ const mainReducer = (state = initialState, action) => {
             },
         }
 
+        case 'REMOVE_JOB': return {
+            ... state,
+            favorites : {
+                ...state.favorites,
+                jobOffers: state.favorites.jobOffers.filter((book,i) => i !== action.payload),
+            }
+        }
+
 
 
         default: {
