@@ -18,7 +18,7 @@ const FavoriteComp = () => {
                 favoriteJobs.map((jobData) => (
                   <div key={jobData._id} style={{ borderBottom: '1px solid #ccc', paddingBottom: '10px', marginBottom: '10px' }}>
                     <Job data={jobData} />
-                    <Button variant="outline-danger" onClick={() => {
+                    {/* <Button variant="outline-danger" onClick={() => {
                         dispatch({
                             type: 'REMOVE_JOB',
                             payload: jobData._id
@@ -26,7 +26,7 @@ const FavoriteComp = () => {
                     }}
                     >
                       Remove from Favorites
-                    </Button>
+                    </Button> */}
                   </div>
                 ))
               ) : (

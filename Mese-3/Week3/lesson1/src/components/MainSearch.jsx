@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { Container, Row, Col, Form } from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import Job from "./Job";
+import { useNavigate } from "react-router-dom";
 
 const MainSearch = () => {
   const [query, setQuery] = useState("");
   const [jobs, setJobs] = useState([]);
+  const navigate= useNavigate()
 
   const baseEndpoint = "https://strive-benchmark.herokuapp.com/api/jobs?search=";
 
@@ -43,6 +45,9 @@ const MainSearch = () => {
           {jobs.map(jobData => (
             <Job key={jobData._id} data={jobData} />
           ))}
+        </Col>
+        <Col>
+          <Button variant="outline-dark">Go on your Favorites</Button>
         </Col>
       </Row>
     </Container>
