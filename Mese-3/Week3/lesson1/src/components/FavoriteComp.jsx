@@ -1,18 +1,26 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Job from './Job'
+import { useNavigate } from "react-router-dom";
 
 
 const FavoriteComp = () => {
 
     const favoriteJobs = useSelector((state) => state.favorites.jobOffers)
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     return (
         <Container>
-          <Row>
-            <Col xs={10} className="mx-auto my-3">
+          <Row className="align-items-center">
+            <Col xs={8} className="mx-auto my-3">
               <h1 className="display-4">Your Favorite Jobs</h1>
+            </Col>
+            <Col xs={4} className="mx-auto my-3">
+            <Button variant="outline-primary"
+            onClick={()=>navigate('/')}
+            >HOME
+            </Button>
             </Col>
             <Col xs={10} className="mx-auto">
               {favoriteJobs.length > 0 ? (

@@ -6,15 +6,16 @@ import { useNavigate } from "react-router-dom";
 const MainSearch = () => {
   const [query, setQuery] = useState("");
   const [jobs, setJobs] = useState([]);
-  const navigate= useNavigate()
+  const navigate = useNavigate();
 
-  const baseEndpoint = "https://strive-benchmark.herokuapp.com/api/jobs?search=";
+  const baseEndpoint =
+    "https://strive-benchmark.herokuapp.com/api/jobs?search=";
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setQuery(e.target.value);
   };
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
@@ -38,16 +39,23 @@ const MainSearch = () => {
         </Col>
         <Col xs={10} className="mx-auto">
           <Form onSubmit={handleSubmit}>
-            <Form.Control type="search" value={query} onChange={handleChange} placeholder="type and press Enter" />
+            <Form.Control
+              type="search"
+              value={query}
+              onChange={handleChange}
+              placeholder="type and press Enter"
+            />
           </Form>
+          <Col xs={8} className="my-2 text-center">
+          <Button variant="outline-dark" onClick={() => navigate("/favorites")}>
+            Go on your Favorites
+          </Button>
+        </Col>
         </Col>
         <Col xs={10} className="mx-auto mb-5">
-          {jobs.map(jobData => (
+          {jobs.map((jobData) => (
             <Job key={jobData._id} data={jobData} />
           ))}
-        </Col>
-        <Col>
-          <Button variant="outline-dark" onClick={()=>navigate('/favorites')}>Go on your Favorites</Button>
         </Col>
       </Row>
     </Container>
