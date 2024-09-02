@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainSearch />} />
         <Route path="/:company" element={<CompanySearchResults />} />
+        <Route path="/favorites" element/>
       </Routes>
     </BrowserRouter>
   );
