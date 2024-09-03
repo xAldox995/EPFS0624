@@ -1,3 +1,5 @@
+import { ADD_JOB } from "../actions"
+
 const initialState = {
     favorites: {
         jobOffers: []
@@ -6,7 +8,7 @@ const initialState = {
 
 const mainReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD_JOB':
+        case ADD_JOB:
             return {
                 ...state,
                 favorites: {
