@@ -7,7 +7,7 @@ import { removeFavoriteJobAction } from "../redux/actions";
 
 const FavoriteComp = () => {
 
-    const favoriteJobs = useSelector((state) => state.favorites.jobOffers)
+    const favoritesJobs = useSelector((state) => state.favoritesJobs)
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
@@ -24,8 +24,8 @@ const FavoriteComp = () => {
             </Button>
             </Col>
             <Col xs={10} className="mx-auto">
-              {favoriteJobs.length > 0 ? (
-                favoriteJobs.map((jobData) => (
+              {favoritesJobs.length > 0 ? (
+                favoritesJobs.map((jobData) => (
                   <div key={jobData._id} style={{ borderBottom: '1px solid #ccc', paddingBottom: '10px', marginBottom: '10px' }}>
                     <Job data={jobData} />
                     <Button variant="outline-danger" onClick={() => {

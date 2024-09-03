@@ -1,29 +1,21 @@
 import { ADD_JOB, REMOVE_JOB } from "../actions"
 
 const initialState = {
-    favorites: {
-        jobOffers: []
-    }
+    favoritesJobs: []
 }
 
-const mainReducer = (state = initialState, action) => {
+const favoritesReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_JOB:
             return {
                 ...state,
-                favorites: {
-                    ...state.favorites,
-                    jobOffers: [...state.favorites.jobOffers, action.payload],
-                },
+                favoritesJobs: [...state.favoritesJobs, action.payload]
             }
 
         case REMOVE_JOB:
             return {
                 ...state,
-                favorites: {
-                    ...state.favorites,
-                    jobOffers: state.favorites.jobOffers.filter((job) => job._id !== action.payload),
-                }
+                favoritesJobs: state.favoritesJobs.filter((job) => job._id !== action.payload)
             }
 
 
@@ -35,4 +27,4 @@ const mainReducer = (state = initialState, action) => {
     }
 }
 
-export default mainReducer
+export default favoritesReducer
