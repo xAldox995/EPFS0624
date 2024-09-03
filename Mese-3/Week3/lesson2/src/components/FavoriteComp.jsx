@@ -25,11 +25,11 @@ const FavoriteComp = () => {
             </Col>
             <Col xs={10} className="mx-auto">
               {favoritesJobs.length > 0 ? (
-                favoritesJobs.map((jobData) => (
-                  <div key={jobData._id} style={{ borderBottom: '1px solid #ccc', paddingBottom: '10px', marginBottom: '10px' }}>
+                favoritesJobs.map((jobData, i) => (
+                  <div key={i} style={{ borderBottom: '1px solid #ccc', paddingBottom: '10px', marginBottom: '10px' }}>
                     <Job data={jobData} />
                     <Button variant="outline-danger" onClick={() => {
-                        dispatch(removeFavoriteJobAction(jobData))
+                        dispatch(removeFavoriteJobAction(i))
                     }}
                     >
                       Remove from Favorites

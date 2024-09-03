@@ -13,7 +13,7 @@ export const addFavoriteJobAction = (data) => {
 export const removeFavoriteJobAction = (jobData) => {
     return {
         type: REMOVE_JOB,
-        payload: jobData._id
+        payload: jobData
     }
 }
 

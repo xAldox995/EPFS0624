@@ -15,7 +15,7 @@ const favoritesReducer = (state = initialState, action) => {
         case REMOVE_JOB:
             return {
                 ...state,
-                favoritesJobs: state.favoritesJobs.filter((job) => job._id !== action.payload)
+                favoritesJobs: state.favoritesJobs.filter((job,i) => i !== action.payload)
             }
 
 
