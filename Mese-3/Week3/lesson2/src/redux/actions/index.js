@@ -32,7 +32,7 @@ export const getJobsAction = (query) => {
             .then((arrayOfJobs) => {
                 dispatch({
                     type: GET_JOBS,
-                    payload: arrayOfJobs,
+                    payload: arrayOfJobs.data,
                 })
             })
             .catch((err) => {
