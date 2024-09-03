@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Job from './Job'
 import { useNavigate } from "react-router-dom";
+import { removeFavoriteJobAction } from "../redux/actions";
 
 
 const FavoriteComp = () => {
@@ -28,10 +29,7 @@ const FavoriteComp = () => {
                   <div key={jobData._id} style={{ borderBottom: '1px solid #ccc', paddingBottom: '10px', marginBottom: '10px' }}>
                     <Job data={jobData} />
                     <Button variant="outline-danger" onClick={() => {
-                        dispatch({
-                            type: 'REMOVE_JOB',
-                            payload: jobData._id
-                        })
+                        dispatch(removeFavoriteJobAction(jobData))
                     }}
                     >
                       Remove from Favorites

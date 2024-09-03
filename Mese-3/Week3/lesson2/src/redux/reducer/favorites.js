@@ -1,4 +1,4 @@
-import { ADD_JOB } from "../actions"
+import { ADD_JOB, REMOVE_JOB } from "../actions"
 
 const initialState = {
     favorites: {
@@ -17,7 +17,7 @@ const mainReducer = (state = initialState, action) => {
                 },
             }
 
-        case 'REMOVE_JOB':
+        case REMOVE_JOB:
             return {
                 ...state,
                 favorites: {
