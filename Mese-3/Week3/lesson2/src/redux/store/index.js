@@ -4,7 +4,7 @@ import jobsReducer from '../reducer/jobs'
 
 const allInOneReducer = combineReducers ({
     favorites: favoritesReducer,
-    jobs: jobsReducer
+    queryJobs: jobsReducer
 })
 
 

@@ -7,7 +7,7 @@ import { getJobsAction } from "../redux/actions";
 
 const MainSearch = () => {
   const [query, setQuery] = useState("");
-  const jobs = useSelector((state) => state.jobs.jobs)
+  const jobs = useSelector((state) => state.queryJobs.jobs)
   const navigate = useNavigate();
   const dispatch = useDispatch()
 
