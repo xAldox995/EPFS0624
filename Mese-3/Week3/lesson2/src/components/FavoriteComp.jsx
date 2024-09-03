@@ -7,7 +7,7 @@ import { removeFavoriteJobAction } from "../redux/actions";
 
 const FavoriteComp = () => {
 
-    const favoritesJobs = useSelector((state) => state.favoritesJobs)
+    const favoritesJobs = useSelector((state) => state.favorites.favoritesJobs)
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
