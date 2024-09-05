@@ -5,7 +5,7 @@
     image_url:    string;
     news_site:    string;
     summary:      string;
-    published_at: Date;
+    published_at: string;
     updated_at:   Date;
     featured:     boolean;
     launches:     any[];
