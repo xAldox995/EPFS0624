@@ -43,7 +43,8 @@ const SpaceFetchComp = () => {
                 style={{ height: '200px', objectFit: 'cover' }}  />
                 <Card.Body>
                   <Card.Title>{article.title}</Card.Title>
-                  <Card.Text className="flex-grow-1">PUBBLICATO IL : {new Date(article.published_at).toLocaleDateString()}</Card.Text>
+                  <Card.Text className="flex-grow-1">
+                  Published on: {new Date(article.published_at).toLocaleDateString()}</Card.Text>
                   <Button
                     variant="outline-primary"
                     className="mt-auto"
