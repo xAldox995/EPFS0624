@@ -27,7 +27,7 @@ const SpaceFetchComp = () => {
     fetchArticles();
   }, []);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <Container>
@@ -43,7 +43,7 @@ const SpaceFetchComp = () => {
                   <Card.Text>{article.summary}</Card.Text>
                   <Button
                     variant="primary"
-                    onClick={()=> navigate('/article/'+ article.id)}
+                    onClick={() => navigate("/article/" + article.id)}
                   >
                     Read More
                   </Button>
